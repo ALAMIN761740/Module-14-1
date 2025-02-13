@@ -7,11 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://kit.fontawesome.com/7a437621cc.js" crossorigin="anonymous"></script>
     
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '',
+                    },
+                    fontFamily:{
+                        'manrope':["Manrope", 'serif']
+                    }
+                },
+            },
+        }
+    </script>
+    
 </head>
-<body>
+<body class="font-manrope">
     <main class="max-w-screen-xl mx-auto px-16 lg:px-28">
         <header class="lg:flex pt-10 mb-20">
             <div>
@@ -112,8 +129,9 @@
                         <button class="px-3 py-2 my-5 bg-white text-orange-700 font-black rounded-lg ">Show All</button>
                     </div>
                 </div>
+               
                 <div class="relative py-24">
-                    <div class="absolute z-10 top-55">
+                    <div class="absolute z-10 bottom-48">
                         <div class=" h-56 w-full md:w-3/4 bg-white text-black rounded-lg flex items-center px-5 ">
                             <div class="absolute -top-5 -left-5 bg-white rounded-full">
                                 <img class="p-1" src="images/client.png" alt="">
@@ -157,8 +175,8 @@
             
          </section>
 
-         <section>
-            <div class=" mb-30">
+         <section class="mb-24">
+            <div>
                 <div class="text-center mb-8 max-w-6xl mx-auto">
                    <h3 class="text-3xl md:text-4xl font-bold mb-4"> News & Events</h3>
                    <p class="text-gray-600 max-w-xl mx-auto ">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p> 
